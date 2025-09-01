@@ -8,4 +8,4 @@ const Todoform = () => {
   )
 }
 
-export default Todoform
+export default TodoForm
