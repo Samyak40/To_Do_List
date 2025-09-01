@@ -1,9 +1,45 @@
-import React from 'react'
+import React, {useState} from 'react'
+import TodoForm from './Todoform'
+import {v4 as uuidv4} from 'uuid';
+import Todo from './Todo';
+import editTodoForm from './editTodoform';
+uuidv4();
 
-const TodoWrapper = () => {
+const TodoWrapper =     () => {
+    const [todos, setTodos] = useState([]);
+const addTodo = todo => {
+    setTodos([...todos, {id:uuidv4(), task: todo, isCompleted: false,isEditing: false}]);
+    
+}
+const toggleComplete = id => {
+  setTodos(todos.map(todo => todo.id === id ? {...todo, completed: !todo.completed} : todo))
+}
+
+const deleteToDo = id => {
+  setTodos(todos.filter(todo => todo.id !== id));
+}
+
+const editToDo = id => {
+  setTodos(todos.map(todo => todo.id === id ? {...todo, isEditing: !todo.isEditing} : todo))
+}
+
+const editTask = (task, id) => {
+  setTodos(todos.map(todo => todo.id === id ? {...todo, task, isEditing: !todo.isEditing} : todo))
+}
+
   return (
-    <div>
-      
+    <div className='todo-wrapper'>
+      <h1>Get things Done!</h1>
+      <TodoForm addTodo={addTodo}/>
+      {todos.map((todo,index) => (
+        todo.isEditing ?( <editTodoForm editToDo={editTask} task={todo} /> ):(
+        <Todo task = {todo} 
+        key = {index} t
+        ToggleComplete={toggleComplete}
+        deleteToDo = {deleteToDo}
+        editToDo = {editToDo}/>
+      )
+      ))}
     </div>
   )
 }
