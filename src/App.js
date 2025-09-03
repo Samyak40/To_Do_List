@@ -3,26 +3,16 @@ import TodoWrapper from './components/TodoWrapper';
 import './App.css'; 
 
 function App() {
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [theme, setTheme] = useState("light");
 
   useEffect(() => {
-    if (darkTheme) {
-      document.body.classList.add('dark-theme');
-      document.body.classList.remove('light-theme');
-    } else {
-      document.body.classList.add('light-theme');
-      document.body.classList.remove('dark-theme');
-    }
-  }, [darkTheme]);
-
-  const handleThemeToggle = () => {
-    setDarkTheme((prev) => !prev);
-  };
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
 
   return (
-    <div className="App">
-      <button className="theme-toggle-btn" onClick={handleThemeToggle}>
-        {darkTheme ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
+    <div>
+      <button className="theme-toggle-btn" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+        Toggle Theme
       </button>
       <TodoWrapper />
     </div>

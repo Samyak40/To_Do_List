@@ -11,13 +11,5 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-body.light-theme {
-  background: linear-gradient(135deg, #f3e7fe 0%, #a8edea 100%);
-  transition: background 0.5s;
-}
-body.dark-theme {
-  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
-  transition: background 0.5s;
-}
-  transition: background 0.5s;
+
 }
