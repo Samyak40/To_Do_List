@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
-  }, [theme]);
+}, [theme]);
 
   return (
     <div>
