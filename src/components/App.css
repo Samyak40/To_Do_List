@@ -2,7 +2,7 @@
 .theme-toggle-btn {
   margin: 1.5rem 0 2.5rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #ffffff;
+  color: #fff;
   border: none;
   padding: 0.8rem 1.8rem;
   border-radius: 50px;
@@ -32,7 +32,7 @@
 /* Dark Theme Styles */
 .dark-theme body {
   background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
-  color: #dd1919;
+  color: #f0f0f0;
 }
 
 .dark-theme .App {
@@ -135,7 +135,7 @@
   --primary-light: #a29bfe;
   --text-dark: #2d3436;
   --text-light: #636e72;
-  --bg-light: #0a76e3;
+  --bg-light: #f8f9fa;
   --white: #f62222;
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -190,6 +190,7 @@ body {
   padding: 2rem 1rem;
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
+  color: #222;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 /* Light Theme Styles */

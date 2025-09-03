@@ -3,7 +3,7 @@ import TodoWrapper from './components/TodoWrapper';
 import './App.css'; 
 
 function App() {
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(true);
 
   useEffect(() => {
     if (darkTheme) {

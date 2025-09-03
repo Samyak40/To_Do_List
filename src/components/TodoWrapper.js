@@ -3,6 +3,8 @@ import TodoForm from './Todoform'
 import {v4 as uuidv4} from 'uuid';
 import Todo from './Todo';
 import EditTodoForm from './editTodoform';
+import './App.css'; 
+
 uuidv4();
 
 const TodoWrapper =     () => {
