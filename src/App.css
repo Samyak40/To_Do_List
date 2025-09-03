@@ -9,7 +9,7 @@
 body {
   background: var(--bg-color);
   color: var(--text-color);
-  transition: background 0.5s, color 0.5s;
+  transition: background 0.5s;
 }
 
 .theme-toggle-btn {
@@ -50,7 +50,7 @@ body {
 :root {
   
   --bg-color: #ffffff;
-  --text-color: #121212
+  --text-color: #121212;
   
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
